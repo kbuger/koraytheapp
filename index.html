@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        
+    </head>
+    <body>
+            <div data-role="page" id="loginContainer" >
+            <div data-role="header">  
+            <center><p>The App - Login Page</p></center>
+            <a href="#settingsContainer" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-notext">Bullets Icon</a>
+            </div>
+                <div data-role="main" class="ui-content">
+                    <a href="#accountsContainer" data-role="button" >Contents</a>   
+                    </div>
+                </div>
+            </div>
+
+            <div data-role="page" id="routerContainer">
+                <div data-role="header" >
+                    <center><p>The App - Router Page</p></center>
+                    <a href="#settingsContainer" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-notext">Bullets Icon</a>
+                </div>
+                <div data-role="main" class="ui-content"> 
+                    <div id="map" class="ui-content" min-height="100%"></div>
+                    <script>
+                        var map;
+                        function initMap() {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: -34.397, lng: 150.644},
+                        zoom: 8
+                        });
+                        }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9OPe-eokSTKn0me3NtQ6bCxCpebLk-88&callback=initMap" async defer>
+                        </script>
+                    <div data-role="footer" class="ui-footer-fixed">
+                        <div data-role="navbar">
+                            <ul>
+                                <li><a href="#routerContainer" data-role="button" >Router</a></li>
+                                <li><a href="#accountsContainer" data-role="button" >Accounts</a></li>
+                            </ul>                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="page" id="accountsContainer" >
+            <div data-role="header" class="ui-header-fixed"> 
+            <center><p>The App - Accounts Page</p></center>
+            <a href="#settingsContainer" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-notext">Bullets Icon</a>
+            </div>
+                <div data-role="main" class="ui-content">
+                <div>
+                    <ul data-role="listview" class="list-view">
+                        <li><a href="#accounDetailsContainer">Firma : CMYK Ltd. Şti</a></li>
+                        <li><a href="#accounDetailsContainer">Firma : Kaju Dijital</a></li>
+                        <li><a href="#accounDetailsContainer">Firma : SistemRobotik Ltd. Şti.</a></li>
+                        <li><a href="#accounDetailsContainer">Firma : Oyak Renault</a></li>
+                        <li><a href="#accounDetailsContainer">Firma : Farba</a></li>
+                        <li><a href="#accounDetailsContainer">Firma : Limon Company</a></li>
+                        <li><a href="#accounDetailsContainer">Firma : Nike</a></li>
+                        <li><a href="#accounDetailsContainer">Firma : Eurest</a></li>
+                        <li><a href="#accounDetailsContainer">Firma : Mavi OSGB</a></li>
+
+                    </ul>
+                </div>
+                        <div data-role="navbar">
+                            <ul>
+                                <li><a href="#newAccountContainer" data-role="button" >Hesap Ekle</a></li>
+                                <li><a href="#plannerContainer" data-role="button" >Gezi Planla</a></li>
+                            </ul>                                  
+                        </div>
+
+                    <div data-role="footer" class="ui-footer-fixed">
+                        <div data-role="navbar">
+                            <ul>
+                                <li><a href="#routerContainer" data-role="button" >Router</a></li>
+                                <li><a href="#accountsContainer" data-role="button" >Accounts</a></li>
+                            </ul>                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-role="page" id="settingsContainer" >
+            <div data-role="header"> 
+            <center><p>The App - Settings Page</p></center>
+            <a href="#settingsContainer" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-notext">Bullets Icon</a>
+            </div>
+                <div data-role="content">
+                    <div data-role="footer" class="ui-footer-fixed">
+                        <a href="#" class="ui-btn" data-rel="back">Geri</a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-role="page" id="newAccountContainer" >
+                <div data-role="header"> 
+            <center><p>The App - Add New Account Form</p></center>
+            <a href="#settingsContainer" data-role="button" data-rel="back" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-notext">Bullets Icon</a>
+            </div>
+            <div data-role="footer" class="ui-footer-fixed">
+            <a href="#" class="ui-btn" data-rel="back">Geri</a>
+            </div>
+            </div>
+
+            <div data-role="page" id="plannerContainer" >
+                <div data-role="header"> 
+            <center><p>The App - Tour Planner Form</p></center>
+            <a href="#settingsContainer" data-role="button" data-rel="back" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-notext">Bullets Icon</a>
+            </div>
+            <div data-role="footer" class="ui-footer-fixed">
+            <div data-role="navbar">
+                            <ul>
+                                <li><a href="#" data-role="button" data-rel="back" >Geri</a></li>
+                                <li><a href="#routerContainer" data-role="button" >Planla</a></li>
+                            </ul>                                  
+                        </div>
+            </div>
+            
+            </div>
+            </div>
+
+            <div data-role="page" id="accounDetailsContainer" >
+                <div data-role="header"> 
+            <center><p>The App - Account Details Form</p></center>
+            <a href="#settingsContainer" data-role="button" data-rel="back" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-notext">Bullets Icon</a>
+            </div>
+            <div data-role="footer" class="ui-footer-fixed">
+            <a href="#" class="ui-btn" data-rel="back">Geri</a>
+            </div>
+    </body>
+</html>
